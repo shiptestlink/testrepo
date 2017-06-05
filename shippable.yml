@@ -17,4 +17,4 @@ build:
     - echo "this is master branch"
 
   ci:
-    - npm install
+    - node --version
