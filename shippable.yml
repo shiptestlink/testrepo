@@ -21,6 +21,6 @@ build:
 
 branches:
   only:
-    - test-br1
-  except:
     - master
+  except:
+    - test-br1
