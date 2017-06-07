@@ -18,3 +18,9 @@ build:
 
   ci:
     - npm install
+
+branches:
+  only:
+    - test-br1
+  except:
+    - master
