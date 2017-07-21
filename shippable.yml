@@ -19,6 +19,8 @@ build:
 
   ci:
     - node --version
+    - echo $JOB_TRIGGERED_BY_NAME
+    - echo $JOB_TRIGGERED_BY_ID
     
     
 
