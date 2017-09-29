@@ -22,6 +22,7 @@ build:
     - echo $JOB_TRIGGERED_BY_NAME
     - echo $JOB_TRIGGERED_BY_ID
     - jfrog rt u sample_file.tgz test-jfrog-ship
+    - jfrog rt dl test-jfrog-ship/codeblocks.tar.xz
     
 integrations:
   hub:
