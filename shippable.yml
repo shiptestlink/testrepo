@@ -28,6 +28,9 @@ integrations:
   hub:
     - integrationName: test-jfrogartifactory
       type: artifactory    
+      
+      
+      
 
 
 
