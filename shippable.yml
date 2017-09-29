@@ -21,8 +21,12 @@ build:
     - node --version
     - echo $JOB_TRIGGERED_BY_NAME
     - echo $JOB_TRIGGERED_BY_ID
+    - jfrog rt u sample_file.tgz test-jfrog-ship
     
-    
+integrations:
+  hub:
+    - integrationName: test-jfrogartifactory
+      type: artifactory    
 
 
 
