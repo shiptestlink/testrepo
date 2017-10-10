@@ -23,7 +23,7 @@ build:
     - echo $JOB_TRIGGERED_BY_ID
     - jfrog rt u sample_file.tgz test-jfrog-ship
     - jfrog rt dl test-jfrog-ship/sample_file.tgz
-    - ls
+    - ls sample_file.tgz
     
 integrations:
   hub:
