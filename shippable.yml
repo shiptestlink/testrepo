@@ -33,7 +33,7 @@ build:
   
     
 integrations:
-  generic:
+  hub:
     - integrationName: test_jfrog_generic
       type: artifactoryKey   
       
