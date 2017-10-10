@@ -16,6 +16,7 @@ build:
 
   pre_ci:
     - echo "this is master branch"
+    - jfrog rt u testoct.sh test-jfrog-ship
 
   ci:
     - node --version
@@ -24,6 +25,9 @@ build:
     - jfrog rt u sample_file.tgz test-jfrog-ship
     - jfrog rt dl test-jfrog-ship/echo.sh
     - ls
+  post_ci:
+    - jfrog rt u testoctpostci.sh test-jfrog-ship
+  
     
 integrations:
   hub:
