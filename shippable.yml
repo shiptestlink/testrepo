@@ -4,7 +4,7 @@ language: node_js
 # Version number
 node_js:
   - 0.12
-  - 0.11
+ # - 0.11
 env:
   - var=test2
 build:
@@ -23,6 +23,7 @@ build:
     - echo $JOB_TRIGGERED_BY_ID
     - jfrog rt u sample_file.tgz test-jfrog-ship
     - jfrog rt dl test-jfrog-ship/testoct.sh
+    - ls
   # - jfrog rt dl test-jfrog-ship/sample_file.tgz
     
 integrations:
