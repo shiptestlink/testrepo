@@ -1,15 +1,16 @@
 # Language setting
-language: node_js
+language: python
 
 # Version number
-node_js:
-  - 0.12
+python:
+ # - 2.6
+  - 2.7
 #  - 0.11
 env:
   - var=test2
 build:
   pre_ci_boot:
-    image_name: drydock/u14nodall
+    image_name: drydock/u16pytall
     image_tag: master
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
@@ -27,7 +28,7 @@ build:
     - jfrog rt dl test-jfrog-ship/echo.sh
     - ls
   post_ci:
-    - jfrog rt u testjf2.sh test-jfrog-ship
+    - jfrog rt u testoctpostci.sh test-jfrog-ship
     - jfrog rt dl test-jfrog-ship/testoctpostci.sh
   
     
