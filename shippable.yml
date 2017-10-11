@@ -15,7 +15,7 @@ build:
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   pre_ci:
-    - echo "this is master branch"
+    - echo "this is master branch-test"
     - jfrog rt dl test-jfrog-ship/testoct.sh
     - ls
 
