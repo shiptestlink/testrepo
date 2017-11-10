@@ -3,22 +3,13 @@ language: node_js
 
 # Version number
 node_js:
-  - 0.12
-#  - 0.11
-env:
-  - var=test2
-build:
-  pre_ci_boot:
-    image_name: drydock/u14nodall
-    image_tag: master
-    pull: true
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+  - 6.11
 
+build:  
   pre_ci:
     - echo "this is master branch"
     - jfrog rt u testoct.sh test-jfrog-ship
     - jfrog rt dl test-jfrog-ship/testoct.sh 
-
   ci:
     - node --version
     - echo $JOB_TRIGGERED_BY_NAME
@@ -28,17 +19,10 @@ build:
     - ls
   post_ci:
     - jfrog rt u testoctpostci.sh test-jfrog-ship
-    - jfrog rt dl test-jfrog-ship/testoctpostci.sh
-  
+    - jfrog rt dl test-jfrog-ship/testoctpostci.sh 
     
 integrations:
   hub:
-    - integrationName: test-jfrogartifactory
-      type: artifactory    
+    - integrationName: jfrog
+      type: artifactory 
       
-      
-      
-
-
-
-
