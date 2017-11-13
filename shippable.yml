@@ -22,10 +22,10 @@ build:
    
   # - jfrog rt dl test-jfrog-ship/sample_file.tgz
     
-integrations:
-  hub:
-    - integrationName: test-jfrogartifactory
-      type: artifactory    
+#integrations:
+ # hub:
+  #  - integrationName: test-jfrogartifactory
+   #   type: artifactory    
       
       
       
