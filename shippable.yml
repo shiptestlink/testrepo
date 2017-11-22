@@ -27,8 +27,27 @@ build:
   #  - integrationName: test-jfrogartifactory
    #   type: artifactory    
       
-      
-      
+resources:
+  - name: gitRepo-resource
+    type: gitRepo
+    integration: github
+    pointer:
+      sourceName: shiptestlink/sample-script-3
+      branch: master
+  - name: img-resource
+    type: image
+    integration: ship-docker
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.2"
+jobs:
+  - name: langtest_u14javall_runCI      # required
+    type: runCI             # required
+    steps:                  # required
+     - IN: gitRepo-resource
+     - IN: img-resource
+     
 
 
 
